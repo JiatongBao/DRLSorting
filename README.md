@@ -11,8 +11,17 @@ Robotic systems are traditionally controlled to repetitively perform specific ac
 
 #### Demo Videos
 
-The video shows how the simulated robot performs on sorting 6 cuboid blocks with random colors after 30000-step trial-and-errors.
-<div align="center"><img src="images/sort_six_blocks_30000.gif" width="60%"></div>
+These two videos show how the simulated robot performs on sorting 6 cuboid blocks with random colors after 5000-step and 30000-step trial-and-errors, respectively.
+<table>
+<tr>
+<td><img src="images/sort_six_blocks_5000.gif"></td>
+<td><img src="images/sort_six_blocks_30000.gif"></td>
+</tr>
+<tr>
+<td align="center">after 5000 steps</td>
+<td align="center">after 30000 steps</td>
+</tr>
+</table>
 
 Demo videos of a real robot in action will be available.
 
