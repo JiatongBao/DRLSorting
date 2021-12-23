@@ -18,8 +18,8 @@ These two videos show how the simulated robot performs on sorting 6 cuboid block
 <td><img src="images/sort_six_blocks_30000.gif"></td>
 </tr>
 <tr>
-<td align="center">after 5000 steps</td>
-<td align="center">after 30000 steps</td>
+<td align="center">after 5,000 steps</td>
+<td align="center">after 30,000 steps</td>
 </tr>
 </table>
 
