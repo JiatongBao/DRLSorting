@@ -1,6 +1,6 @@
 # Learn Multi-Step Object Sorting Tasks through Deep Reinforcement Learning
 
-This repository will provide PyTorch code for training and testing object sorting policies with deep reinforcement learning in both simulation and real-world settings on a UR5/UR3 robot arm. This is the reference implementation for the manuscript submitted to Robotica:
+This repository will provide PyTorch code for training and testing object sorting policies with deep reinforcement learning in both simulation and real-world settings on a UR5/UR3 robot arm. This is the reference implementation for the manuscript submitted to <i>Robotica</i>.
 
 ### Learn Multi-Step Object Sorting Tasks through Deep Reinforcement Learning
 
