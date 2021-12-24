@@ -23,6 +23,18 @@ These two videos show how the simulated robot performs on sorting 6 cuboid block
 </tr>
 </table>
 
+In order to show the potential capability of our model, the task of sorting 10 blocks with random colors and shapes is performed.
+<table>
+<tr>
+<td><img src="images/sort_ten_blocks_30000.gif"></td>
+<td><img src="images/sort_ten_blocks_50000.gif"></td>
+</tr>
+<tr>
+<td align="center">after 30,000 steps</td>
+<td align="center">after 50,000 steps</td>
+</tr>
+</table>
+
 Demo videos of a real robot in action will be available.
 
 #### Contact
