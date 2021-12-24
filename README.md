@@ -52,4 +52,4 @@ Model3 (trained on tasks of sorting 6 blocks with random colors) [Download](
 https://drive.google.com/file/d/1cdqIqTWBgmWhSkWcDLdIbAWwhDlH8Rfv/view?usp=sharing)
 
 ## Acknowledgement
-Our code is based on [VPG](https://github.com/andyzeng/visual-pushing-grasping) and [good_robot](https://github.com/jhu-lcsr/good_robot).
+Our code is based on [VPG](https://github.com/andyzeng/visual-pushing-grasping) and [Good Robot!](https://github.com/jhu-lcsr/good_robot).
