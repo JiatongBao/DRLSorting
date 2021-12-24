@@ -38,10 +38,10 @@ def action_space_argmax(primitive_action, push_predictions, grasp_predictions, p
 def random_unmasked_index_in_mask_array(maskarray):
     """ Return an index in a masked array which is selected with a uniform random distribution from the valid aka unmasked entries where the masked value is 0.
     """
-    # TODO(ahundt) currently a whole new float mask is created to define the probabilities. There may be a much more efficient way to handle this.
+    # currently a whole new float mask is created to define the probabilities. There may be a much more efficient way to handle this.
     if np.ma.is_masked(maskarray):
         # Randomly select from only regions which are valid exploration regions
-        p = (np.array(1-maskarray.mask, dtype=np.float)/np.float(maskarray.count())).ravel()     #ravel()方法将数组维度拉成一维数组
+        p = (np.array(1-maskarray.mask, dtype=np.float)/np.float(maskarray.count())).ravel()
     else:
         # Uniform random across all locations
         p = None

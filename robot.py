@@ -273,7 +273,6 @@ class Robot(object):
 
         self.calc_object_num_be_placed()
 
-    # TODO: Set planes color, plane represents box in vrep
     def set_plane(self):
         for plane_idx in range(self.box_num):
             if self.is_testing and self.test_preset_cases:
@@ -368,7 +367,7 @@ class Robot(object):
 
         for object_handle in self.object_handles:
 
-            # Drop object at random x,y location and random orientation in robot workspace
+            # Drop object at random location and orientation in robot workspace
             drop_x = (workspace_limits[0][1] - workspace_limits[0][0] - 0.2) * np.random.random_sample() + workspace_limits[0][0] + 0.1
             drop_y = (workspace_limits[1][1] - workspace_limits[1][0] - 0.2) * np.random.random_sample() + workspace_limits[1][0] + 0.1
             object_position = [drop_x, drop_y, 0.15]
@@ -381,7 +380,6 @@ class Robot(object):
     def get_camera_data(self):
 
         if self.is_sim:
-
             # Get color image from simulation
             sim_ret, resolution, raw_image = vrep.simxGetVisionSensorImage(self.sim_client, self.cam_handle, 0, vrep.simx_opmode_blocking)
             color_img = np.asarray(raw_image)
@@ -950,7 +948,6 @@ class Robot(object):
 
         self.obj_num_should_be_placed = cnt
 
-    # TODO: need to considering the number of interference objects
     def check_task_episode_complete(self, interference_num=0):
         if self.is_sim:
             obj_positions = np.asarray(self.get_obj_positions())
@@ -971,7 +968,6 @@ class Robot(object):
             print('success count: %d / %d' % (count, self.obj_num_should_be_placed))
             return count == self.obj_num_should_be_placed or count + out_count == self.obj_num_should_be_placed
         else:
-            # need to considering the number of interference objects
             need_to_place = self.num_obj - interference_num
             return need_to_place == self.check_real_robot_progress()
 

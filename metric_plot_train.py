@@ -68,7 +68,7 @@ def calcul_grasp_place_suceess_rate(executed_actions_log, grasp_success_log, pla
 def calcul_sort_success_rate(progress_log, clearance_log, objects_num=4, window=50):
     sort_success_rate = []
 
-    # TODO: get the number of objects has been sorted for each episode
+    # get the number of objects has been sorted for each episode
     sort_success_num = []
     for i in clearance_log:
         trial_sort_success_num = progress_log[i-1]
@@ -174,7 +174,7 @@ def main(args):
     four_random_executed_actions_log = np.loadtxt(os.path.join(log_dir, 'four-random/executed-action.log.txt'))
     six_random_executed_actions_log = np.loadtxt(os.path.join(log_dir, 'six-random/executed-action.log.txt'))
 
-    # TODO: calculate the efficiency of actions
+    # calculate the action efficiency
     actions_efficiency = []
     four_fix_actions_efficiency = calcul_action_efficiency(four_fix_executed_actions_log, four_fix_place_success_log, window=500)
     actions_efficiency.append(four_fix_actions_efficiency)
@@ -189,7 +189,7 @@ def main(args):
     save_path_actions_efficiency = '/home/ralab/Research/sort/plot/actions_efficiency.eps'
     plot_efficiency(actions_efficiency, x_label, y_label, title, save_path_actions_efficiency)
 
-    # TODO: calculate the success rate of grasp & place
+    # calculate the success rate of grasp & place
     grasp_success_rate = []
     place_success_rate = []
     four_fix_grasp_success_rate, four_fix_place_success_rate = calcul_grasp_place_suceess_rate(four_fix_executed_actions_log, four_fix_grasp_success_log, four_fix_place_success_log, window=500)
@@ -211,7 +211,7 @@ def main(args):
     plot_grasp_success_rate(grasp_success_rate, x_label, y_label, grasp_title, save_path_grasp_success_rate)
     plot_place_success_rate(place_success_rate, x_label, y_label, place_title, save_path_place_success_rate)
 
-    # TODO: calculate the success rate of sort
+    # calculate the success rate of sorting
     sort_success_rate = []
     four_fix_sort_success_rate = calcul_sort_success_rate(four_fix_progress_log, four_fix_clearance_log, objects_num=4, window=50)
     sort_success_rate.append(four_fix_sort_success_rate)

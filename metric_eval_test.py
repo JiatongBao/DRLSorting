@@ -1,4 +1,4 @@
-# TODO: Data processing is based on episode.
+# Data processing is based on episode.
 
 import argparse
 import numpy as np

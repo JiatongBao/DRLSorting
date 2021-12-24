@@ -371,7 +371,7 @@ def common_sense_action_space_mask(depth_heightmap, push_predictions=None, grasp
 
     Numpy MaskedArrays push_predictions, grasp_predictions, place_predictions
     """
-    # TODO(ahundt) "common sense" dynamic action space parameters should be accessible from the command line
+    # "common sense" dynamic action space parameters should be accessible from the command line
     # "common sense" dynamic action space, mask pixels we know cannot lead to progress
     if push_predictions is not None:
         if use_prior:
