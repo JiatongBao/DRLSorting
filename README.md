@@ -42,3 +42,13 @@ If you have any questions or find any bugs, please let me know: [Jiatong Bao] jt
 
 ## Installation
 To be continued.
+
+#### Pretrained Models
+Model1 (trained on tasks of sorting 4 blocks with fixed colors)
+https://drive.google.com/file/d/1_tFZJUNs0p9UkGV4AiDwF7955unbNRTS/view?usp=sharing
+
+Model2 (trained on tasks of sorting 4 blocks with random colors)
+https://drive.google.com/file/d/12Czid2KE0FcPVsUPCM_L4qba5_3qdnku/view?usp=sharing
+
+Model3 (trained on tasks of sorting 6 blocsk with random colors)
+https://drive.google.com/file/d/1cdqIqTWBgmWhSkWcDLdIbAWwhDlH8Rfv/view?usp=sharing
