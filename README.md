@@ -50,3 +50,6 @@ Model2 (trained on tasks of sorting 4 blocks with random colors) [Download](
 https://drive.google.com/file/d/12Czid2KE0FcPVsUPCM_L4qba5_3qdnku/view?usp=sharing)<br>
 Model3 (trained on tasks of sorting 6 blocks with random colors) [Download](
 https://drive.google.com/file/d/1cdqIqTWBgmWhSkWcDLdIbAWwhDlH8Rfv/view?usp=sharing)
+
+## Acknowledgement
+Our code is based on [VPG](https://github.com/andyzeng/visual-pushing-grasping) and [good_robot](https://github.com/jhu-lcsr/good_robot).
