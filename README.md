@@ -35,7 +35,7 @@ In order to show the potential capability of our model, the task of sorting 10 b
 </tr>
 </table>
 
-Demo videos of a real robot in action will be available.
+Demo videos of a real robot in action.
 <table>
 <tr>
 <td><img src="images/real_sort_four.gif"></td>
