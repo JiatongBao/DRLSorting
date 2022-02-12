@@ -36,6 +36,16 @@ In order to show the potential capability of our model, the task of sorting 10 b
 </table>
 
 Demo videos of a real robot in action will be available.
+<table>
+<tr>
+<td><img src="images/real_sort_four.gif"></td>
+<td><img src="images/real_sort_six.gif"></td>
+</tr>
+<tr>
+<td align="center">sort four blocks in real setups</td>
+<td align="center">sort six blocks in real setups</td>
+</tr>
+</table>
 
 #### Contact
 If you have any questions or find any bugs, please let me know: [Jiatong Bao] jtbao[at]yzu[dot]edu[dot]cn
