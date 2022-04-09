@@ -53,7 +53,7 @@ If you have any questions or find any bugs, please let me know: [Jiatong Bao] jt
 ## Installation
 We use PyTorch (1.8) to implement and train the models on a PC with Intel Core CPU i9-10900KF, NVIDIA GTX 3090 GPU (with CUDA 11.1.1 and cuDNN 8.1.0) and 32G memory running Ubuntu 16.04.
 
-1. Install [Anaconda](https://www.anaconda.com/) software and create virtual environment
+1. Install [Anaconda](https://www.anaconda.com/) and create virtual environment
 ```shell
 conda create -n sort python=3.8.10 -y
 ```
