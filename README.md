@@ -1,6 +1,6 @@
 # Learn Multi-Step Object Sorting Tasks through Deep Reinforcement Learning
 
-This repository will provide PyTorch code for training and testing object sorting policies with deep reinforcement learning in both simulation and real-world settings on a UR5/UR3 robot arm. This is the reference implementation for the manuscript submitted to <i>Robotica</i>.
+This repository will provide PyTorch code for training and testing object sorting policies with deep reinforcement learning in both simulation and real-world settings on a UR5/UR3 robot arm. This is the reference implementation for the paper which will be published on <i>Robotica</i>.
 
 ### Learn Multi-Step Object Sorting Tasks through Deep Reinforcement Learning
 
@@ -51,7 +51,33 @@ Demo videos of a real robot in action.
 If you have any questions or find any bugs, please let me know: [Jiatong Bao] jtbao[at]yzu[dot]edu[dot]cn
 
 ## Installation
-To be continued.
+We use PyTorch to implement and train the models on a PC with Intel Core CPU i9-10900KF, NVIDIA GTX 3090 GPU (with CUDA 11.1.1 and cuDNN 8.1.0) and 32G memory running Ubuntu 16.04.
+
+## How to run
+### Training
+```shell
+export CUDA_VISIBLE_DEVICES="0" && python3 main.py --is_sim --obj_mesh_dir objects/blocks --num_obj 10 --push_rewards --experience_replay --random_actions --use_commonsense --explore_rate_decay --future_reward_discount 0.65 --max_iter 40000 --save_visualization
+```
+
+### Continue training
+```shell
+export CUDA_VISIBLE_DEVICES="0" && python3 main.py --is_sim --obj_mesh_dir objects/blocks --num_obj 10 --push_rewards --experience_replay --random_actions --use_commonsense --explore_rate_decay --future_reward_discount 0.65 --max_iter 40000 --save_visualization --load_snapshot --snapshot_file './logs/2021-11-24.10:29:18/models/snapshot-backup.reinforcement.pth' --continue_logging --logging_directory './logs/2021-11-24.10:29:18'
+```
+
+### How to plot
+```shell
+python metric_plot_train.py --log_dir 'plot'
+```
+
+### How to evaluate
+```shell
+python metric_eval_test.py --log_dir './logs/2021-12-24.14:59:43/transitions' --object_num 4
+```
+
+### Real scene testing
+```shell
+export CUDA_VISIBLE_DEVICES="0" && python3 main.py --is_testing --num_obj 6 --load_snapshot --snapshot_file './logs/Model3/snapshot-backup.reinforcement.pth' --heightmap_resolution 0.00125 --max_test_trials 20
+```
 
 #### Pretrained Models
 Model1 (trained on tasks of sorting 4 blocks with fixed colors) 
