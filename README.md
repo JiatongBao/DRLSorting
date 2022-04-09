@@ -51,30 +51,48 @@ Demo videos of a real robot in action.
 If you have any questions or find any bugs, please let me know: [Jiatong Bao] jtbao[at]yzu[dot]edu[dot]cn
 
 ## Installation
-We use PyTorch to implement and train the models on a PC with Intel Core CPU i9-10900KF, NVIDIA GTX 3090 GPU (with CUDA 11.1.1 and cuDNN 8.1.0) and 32G memory running Ubuntu 16.04.
+We use PyTorch (1.8) to implement and train the models on a PC with Intel Core CPU i9-10900KF, NVIDIA GTX 3090 GPU (with CUDA 11.1.1 and cuDNN 8.1.0) and 32G memory running Ubuntu 16.04.
+
+1. Install [Anaconda](https://www.anaconda.com/) software and create virtual environment
+```shell
+conda create -n sort python=3.8.10 -y
+```
+2. Install [PyTorch](https://pytorch.org/)
+```shell
+conda activate sort
+conda install pytorch=1.8 torchvision cudatoolkit=11.1 -c pytorch -c conda-forge
+```
+3. Install python libraries
+```shell
+pip3 install numpy scipy opencv-python matplotlib
+```
+4. Install [V-REP](http://www.coppeliarobotics.com/) (now known as [CoppeliaSim](http://www.coppeliarobotics.com/)) simulation environment
 
 ## How to run
-### Training
+#### Prepare simulation environment
+Run V-REP (navigate to your V-REP/CoppeliaSim directory and run `./vrep.sh` or `./coppeliaSim.sh`). From the main menu, select `File` > `Open scene...`, and open the file `DRLSorting/simulation/simulation.ttt` from this repository.
+
+#### Training
 ```shell
 export CUDA_VISIBLE_DEVICES="0" && python3 main.py --is_sim --obj_mesh_dir objects/blocks --num_obj 10 --push_rewards --experience_replay --random_actions --use_commonsense --explore_rate_decay --future_reward_discount 0.65 --max_iter 40000 --save_visualization
 ```
 
-### Continue training
+#### Continue training
 ```shell
 export CUDA_VISIBLE_DEVICES="0" && python3 main.py --is_sim --obj_mesh_dir objects/blocks --num_obj 10 --push_rewards --experience_replay --random_actions --use_commonsense --explore_rate_decay --future_reward_discount 0.65 --max_iter 40000 --save_visualization --load_snapshot --snapshot_file './logs/2021-11-24.10:29:18/models/snapshot-backup.reinforcement.pth' --continue_logging --logging_directory './logs/2021-11-24.10:29:18'
 ```
 
-### How to plot
+#### How to plot
 ```shell
 python metric_plot_train.py --log_dir 'plot'
 ```
 
-### How to evaluate
+#### How to evaluate
 ```shell
 python metric_eval_test.py --log_dir './logs/2021-12-24.14:59:43/transitions' --object_num 4
 ```
 
-### Real scene testing
+#### Real scene testing
 ```shell
 export CUDA_VISIBLE_DEVICES="0" && python3 main.py --is_testing --num_obj 6 --load_snapshot --snapshot_file './logs/Model3/snapshot-backup.reinforcement.pth' --heightmap_resolution 0.00125 --max_test_trials 20
 ```
