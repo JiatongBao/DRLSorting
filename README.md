@@ -19,9 +19,10 @@ If you find this code useful in your work, please consider citing:
   author={Bao, Jiatong and Zhang, Guoqing and Peng, Yi and Shao, Zhiyu and Song, Aiguo},
   DOI={10.1017/S0263574722000650},
   journal={Robotica},
-  publisher={Cambridge University Press},
-  year={2022},
-  pages={1–17}
+  Year = {2022},
+  Volume = {40},
+  Number = {11},
+  Pages = {3878-3894}
 }
 ```
 
